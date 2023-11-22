@@ -29,7 +29,14 @@ public class PetStoreUserEndPoint {
                 .delete(Config.USER_NAME, name)
                 .then().extract().response();
     }
-
+    public Response updatePet(User user, String name) {
+        return given()
+                .pathParam("username", name)
+                .body(user)
+                .when()
+                .put(Config.USER_NAME)
+                .then().extract().response();
+    }
 
     private RequestSpecification given() {
         return RestAssured.given()

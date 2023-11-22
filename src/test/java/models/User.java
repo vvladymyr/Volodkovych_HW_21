@@ -89,5 +89,18 @@ public class User {
     public int hashCode() {
         return Objects.hash(id, username, firstName, lastName, email, password, phone, userStatus);
     }
-}
 
+    public static User createUserPet(long id, String name) {
+
+        User user = new User();
+        user.setId(1);
+        user.setUsername("Vasya");
+        user.setFirstName("Vasyl");
+        user.setLastName("Tymchenko");
+        user.setEmail("vasya@ukr.net");
+        user.setPassword("vasya");
+        user.setPhone("5555555");
+        user.setUserStatus(0);
+        return user;
+}
+}
