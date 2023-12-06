@@ -31,7 +31,7 @@ public class CrudTests {
 
     @Test
     public void  readUser() {
-        User user = User.createUserPet(1, "Vasy");
+        User user = User.createUserPet(1, "Vasya");
         new PetStoreUserEndPoint().createUser(user);
         Response userResponse = new PetStoreUserEndPoint().getUserName(user.getUsername());
         User userFromService = userResponse.body().as(User.class);
